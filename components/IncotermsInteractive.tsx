@@ -59,10 +59,10 @@ const STEPS_IMPORT = [
 ];
 
 // Helpers visuales
-const pill = (base) =>
+const pill = (base: string) =>
   `inline-flex items-center rounded-full px-2 py-0.5 text-xs font-semibold ${base}`;
 
-const badge = (base) =>
+const badge = (base: string) =>
   `inline-flex items-center rounded-md px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide ${base}`;
 
 const sectionTitle = "text-sm font-semibold";
@@ -963,3 +963,4 @@ const [autoSuggest, setAutoSuggest] = useState(true);
     </div>
   );
 }
+
