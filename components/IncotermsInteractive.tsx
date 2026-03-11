@@ -174,12 +174,14 @@ const objectiveGuidance = {
   },
 };
 
-const cargoTypesMeta = cargoTypes.reduce((acc, c) => {
+type CargoType = (typeof cargoTypes)[number];
+const cargoTypesMeta = cargoTypes.reduce<Record<string, CargoType>>((acc, c) => {
   acc[c.key] = c;
   return acc;
 }, {});
 
-const objectivesMeta = objectives.reduce((acc, o) => {
+type ObjectiveType = (typeof objectives)[number];
+const objectivesMeta = objectives.reduce<Record<string, ObjectiveType>>((acc, o) => {
   acc[o.key] = o;
   return acc;
 }, {});
@@ -963,4 +965,5 @@ const [autoSuggest, setAutoSuggest] = useState(true);
     </div>
   );
 }
+
 
